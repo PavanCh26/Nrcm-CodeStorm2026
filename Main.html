@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CodeStorm 2026 | NRCM Hackathon</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+/* ================= GLOBAL ================= */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#0a0a0a;color:#fff;}
+
+/* ================= NAVBAR ================= */
+nav{
+width:100%;padding:18px 30px;position:fixed;top:0;left:0;z-index:100;
+display:flex;justify-content:space-between;align-items:center;
+background:rgba(0,0,0,0.75);backdrop-filter:blur(8px);
+}
+nav h2{color:#ff2d2d;font-size:24px;font-weight:800;}
+nav ul{display:flex;gap:20px;list-style:none;}
+nav a{color:#fff;text-decoration:none;font-size:16px;font-weight:500;}
+nav a:hover{color:#ff2d2d;}
+
+/* ================= HERO SECTION ================= */
+.hero{
+height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;
+background:url('https://i.ibb.co/nr6s0G8/nrcm.jpg') center/cover no-repeat; /* Your college img hosted free */
+position:relative;
+}
+.hero::after{
+content:'';position:absolute;inset:0;background:rgba(0,0,0,0.75);
+}
+.hero-content{position:relative;z-index:2;animation:fadeUp 1.5s ease;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;}}
+
+.hero h1{font-size:50px;font-weight:900;color:#ff2d2d;text-shadow:0 0 25px red;}
+.hero h3{margin-top:10px;color:#f4f4f4;}
+.hero p{margin:5px 0 15px;color:#ddd;}
+
+.hero button{
+margin-top:20px;padding:12px 30px;font-size:18px;border:none;border-radius:8px;
+background:#ff2d2d;color:white;cursor:pointer;font-weight:700;
+animation:glow 1.5s infinite alternate;
+}
+@keyframes glow{from{box-shadow:0 0 10px red;}to{box-shadow:0 0 30px red;}}
+
+/* COUNTDOWN BOX */
+.countdown{display:flex;justify-content:center;margin-top:25px;gap:15px;}
+.countdown div{
+background:#111;padding:12px 18px;border-radius:10px;font-weight:700;
+border:1px solid #ff2d2d;box-shadow:0 0 15px rgba(255,0,0,0.3);
+}
+.countdown span{font-size:22px;color:#ff2d2d;}
+
+/* ================= INFO SECTION ================= */
+section{padding:60px 6%;text-align:center;}
+
+.tag{color:#ff2d2d;font-size:28px;font-weight:800;margin-bottom:10px;}
+
+.cards{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin-top:25px;}
+.card{
+background:#141414;padding:18px 25px;font-weight:600;border-left:5px solid #ff2d2d;
+border-radius:8px;min-width:230px;
+}
+
+/* ================= THEMES ================= */
+.theme-card{
+background:#111;padding:22px;border-left:4px solid red;border-radius:8px;
+min-width:260px;margin:10px auto;font-size:17px;font-weight:600;
+}
+
+/* ================= FORM ================= */
+.form-box{
+width:330px;margin:40px auto;background:#111;padding:25px;border-radius:10px;
+}
+.form-box input, .form-box button{
+width:100%;padding:10px;margin-top:10px;border:none;border-radius:6px;
+}
+.form-box button{background:red;color:#fff;font-weight:700;}
+
+/* ================= FOOTER ================= */
+footer{background:#111;padding:15px;margin-top:30px;text-align:center;}
+</style>
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav>
+<h2>⚡ CodeStorm 2026</h2>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#themes">Themes</a></li>
+<li><a href="#register">Register</a></li>
+</ul>
+</nav>
+
+<!-- ========== HERO SECTION ========== -->
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>CODESTORM 2026</h1>
+<p>36 Hours National Hackathon</p>
+<h3>28 - 29 February 2026 | NRCM, Maisammaguda</h3>
+
+<button onclick="location.href='#register'">Register Now 🚀</button>
+
+<div class="countdown">
+<div><span id="days"></span> Days</div>
+<div><span id="hours"></span> Hr</div>
+<div><span id="minutes"></span> Min</div>
+<div><span id="seconds"></span> Sec</div>
+</div>
+</div>
+</section>
+
+<!-- ========== INFO SECTION ========== -->
+<section>
+<h2 class="tag">₹1,00,000 Prize Pool 🏆</h2>
+<p>Think • Build • Innovate • Win</p>
+
+<div class="cards">
+<div class="card">Team Size : <b>4 - 6 Members</b></div>
+<div class="card">Registration Fee : <b>₹800 / Team</b></div>
+<div class="card">Certificates : <b>Participation + Winners</b></div>
+<div class="card">Duration : <b>36 Hours</b></div>
+<div class="card">Venue : <b>NRCM, Maisammaguda</b></div>
+</div>
+</section>
+
+<!-- ========== THEMES ========== -->
+<section id="themes">
+<h2 class="tag">Hackathon Domains 🔍</h2>
+
+<div class="cards" style="max-width:800px;margin:auto;">
+<div class="theme-card">CSE & IT Innovations</div>
+<div class="theme-card">Cyber Security Projects</div>
+<div class="theme-card">AI/ML Modern Solutions</div>
+<div class="theme-card">ECE Smart Hardware</div>
+<div class="theme-card">EEE Energy Systems</div>
+<div class="theme-card">Mechanical Automation</div>
+<div class="theme-card">Civil Infrastructure</div>
+</div>
+</section>
+
+<!-- ========== REGISTRATION ========== -->
+<section id="register">
+<h2 class="tag">Register Your Team 🚀</h2>
+
+<div class="form-box">
+<input type="text" placeholder="Team Name" required>
+<input type="text" placeholder="Leader Name" required>
+<input type="email" placeholder="Email" required>
+<input type="number" placeholder="Phone Number" required>
+<input type="number" placeholder="Members (4-6)" required>
+
+<!-- CHANGE FORM LINK HERE -->
+<button onclick="alert('Replace with payment / Google form link')">Proceed to Pay ₹800</button>
+</div>
+
+<p>🔔 *You can change price link anytime easily.</p>
+</section>
+
+<footer>
+<p>© CodeStorm Hackathon 2026 | Narsimhareddy Engineering College</p>
+</footer>
+
+<!-- ================= JS COUNTDOWN ================= -->
+<script>
+let target = new Date("Feb 28, 2026 10:00:00").getTime();
+setInterval(()=>{
+let now = new Date().getTime();
+let d = target-now;
+
+document.getElementById("days").innerHTML=Math.floor(d/(1000*60*60*24));
+document.getElementById("hours").innerHTML=Math.floor((d%(1000*60*60*24))/(1000*60*60));
+document.getElementById("minutes").innerHTML=Math.floor((d%(1000*60*60))/(1000*60));
+document.getElementById("seconds").innerHTML=Math.floor((d%(1000*60))/1000);
+},1000);
+</script>
+
+</body>
+  </html>
+                                     
